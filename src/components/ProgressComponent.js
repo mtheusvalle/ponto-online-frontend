@@ -7,24 +7,7 @@ export default function Progress() {
   const [tempo, setTempo] = useState(10);
   const [pause, setPause] = useState(false);
 
-  let intervalRef = useRef();
-
-  const decreaseNum = () => setTempo((prev) => prev + 1);
-
-  useEffect(() => {
-    setPause(false);
-    intervalRef.current = setInterval(decreaseNum, 1000);
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
-  const handleClick = () => {
-    if (!pause) {
-      clearInterval(intervalRef.current);
-    } else {
-      intervalRef.current = setInterval(decreaseNum, 1000);
-    }
-    setPause((prev) => !prev);
-  };
+  
 
   return (
     <Box sx={{ display: "flex", alignItems: "center", marginBottom: "30px" }}>
