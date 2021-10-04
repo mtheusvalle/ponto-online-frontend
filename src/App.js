@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./Home";
+
+import { Grid } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: "#fff",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+    textAlign: 'center'
+  },
+});
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid className={classes.root}>
+      <Home />
+    </Grid>
   );
 }
 
