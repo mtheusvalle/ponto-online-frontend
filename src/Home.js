@@ -129,7 +129,7 @@ export default function Home() {
             size="large"
             onClick={handlePonto}
           >
-            Entrada
+            Entrada ponto
           </Button>
           <Button onClick={getEntradas}>Get Dados</Button>
         </>
